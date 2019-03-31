@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Неопознанный енот](https://up.htmlacademy.ru/adaptive/16/user/809925).
-* Наставник: `Неизвестно`.
+* Студент: [Екатерина Галимьянова](https://up.htmlacademy.ru/adaptive/16/user/809925).
+* Наставник: `Анна Пономарёва`.
 
 ---
 
