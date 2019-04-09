@@ -2,20 +2,23 @@
   padding: @padding;
   margin: @margin;
 }
-.fonts(@family; @size; @height; @color; @style; @transform; @decoration) {
+
+.fonts(@size; @height; @color; @transform; @family: @mainFont; @style: normal; @decoration: none) {
   font-family: @family;
   font-size: @size;
-  line-height:  @height;
+  line-height: @height;
   color: @color;
   font-style: @style;
   text-transform: @transform;
   text-decoration: @decoration;
 }
+
 .list(@style; @padding; @margin) {
   list-style: @style;
   padding: @padding;
   margin: @margin;
 }
+
 .background (@color; @image; @repeat; @position; @size) {
   background-color: @color;
   background-image: @image;

@@ -1,25 +1,35 @@
 .catalog-products {
   outline: 2px solid green;
 }
+
 .catalog-products__list {
   .list(none; 0; 0);
 }
+
 .catalog-products__link {
-  .fonts("Oswald","Arial", sants-serif; 16px; 20px; #111111; normal; uppercase; none);
+  .fonts(16px; 20px; #111111; uppercase);
 }
+
 .catalog-products__table {
-  .fonts("Arial", sants-serif; 12px; 16px; #444444; normal; none; none);
+  .fonts(12px; 16px; #444444; none; @family: @secondFont);
 }
+
 .catalog-products__show {
-  .fonts("Oswald","Arial", sants-serif; 16px; 20px; #111111; normal; uppercase; none);
+  .fonts(16px; 20px; #111111; uppercase);
 }
+
 .catalog-products__tastyes {
-  .fonts("Oswald","Arial", sants-serif; 16px; 20px; #111111; normal; none; none);
+  .fonts(16px; 20px; #111111; none);
 }
+
 .catalog-products__more {
   padding: 50px;
 }
-.catalog-products__button--show {
-  background-color: #f2f2f2;
-  color: #444444;
+
+.catalog-products__button {
+  /*styles*/
+  &--show {
+    background-color: #f2f2f2;
+    color: #444444;
+  }
 }
