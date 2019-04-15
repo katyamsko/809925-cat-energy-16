@@ -1,5 +1,39 @@
 .page-header {
-  outline: 2px solid red;
-  padding: 10px 15px;
-  margin-bottom: 4px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.page-header__logo {
+  text-align: left;
+}
+
+.page-header__logo-img {
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    display: flex;
+    justify-content: space-around;
+    width: 768px;
+  }
+
+  .page-header__logo img {
+    display: block;
+    width: 192px;
+    height: 65px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 1440px;
+  }
+
+  .page-header__logo img {
+    width: 245px;
+  }
 }

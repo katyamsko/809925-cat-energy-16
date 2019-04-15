@@ -1,7 +1,70 @@
 .site-list {
   .list(none, 0, 0);
+  text-align: center;
 }
 
 .site-list__link {
+  display: block;
   .fonts(20px; 20px; #111111; uppercase);
+}
+
+.site-list__item {
+  padding: 22px;
+  border-top: 1px solid #e6e6e6;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .site-list__link {
+    .fonts(18px; 25px; #111111; uppercase);
+    padding: 0;
+    padding-bottom: 23px;
+    background: none;
+    border: none;
+  }
+
+  .site-list__item:last-child {
+    margin-right: 0;
+  }
+
+  .site-list__link--active {
+    position: relative;
+  }
+
+  .site-list__link--active::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 13px;
+    left: 0;
+    height: 3px;
+    background: #68b738;
+  }
+
+  .site-list__item a[href]:hover {
+    color: #d24899;
+  }
+
+  .site-list__item a[href]:active {
+    color: #d24899;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item {
+    margin-right: 0;
+  }
+
+  .site-list__link {
+    .fonts(18px; 25px; white; uppercase);
+  }
+
+  .site-list__link--black {
+    color: #111111;
+  }
 }
