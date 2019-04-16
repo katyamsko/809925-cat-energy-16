@@ -26,14 +26,14 @@
     padding-bottom: 23px;
     background: none;
     border: none;
+
+    &--active {
+      position: relative;
+    }
   }
 
   .site-list__item:last-child {
     margin-right: 0;
-  }
-
-  .site-list__link--active {
-    position: relative;
   }
 
   .site-list__link--active::after {
@@ -62,9 +62,9 @@
 
   .site-list__link {
     .fonts(18px; 25px; white; uppercase);
-  }
 
-  .site-list__link--black {
-    color: #111111;
+    &--black {
+      color: #111111;
+    }
   }
 }

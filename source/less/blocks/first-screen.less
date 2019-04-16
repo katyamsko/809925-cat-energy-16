@@ -83,7 +83,7 @@
     z-index: -1;
   }
 
-  .first-screen .first-screen__choose-program {
+  .first-screen__choose-program {
     width: 245px;
     padding-left: 25px;
     padding-right: 25px;
@@ -101,25 +101,24 @@
     width: 1440px;
     margin-bottom: 65px;
     position: relative;
-  }
 
-  .first-screen::before {
-    position: absolute;
-    top: -200px;
-    right: 0;
-    box-sizing: border-box;
-    width: 720px;
-    height: 690px;
-    background-color: #63a63b;
-    content: "";
-    z-index: -1;
+    &::before {
+      position: absolute;
+      top: -200px;
+      right: 0;
+      box-sizing: border-box;
+      width: 720px;
+      height: 690px;
+      background-color: #63a63b;
+      content: "";
+      z-index: -1;
 
-
-    background-image: url("../img/index-background-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 720px 690px;
-    opacity: 1;
+      background-image: url("../img/index-background-mobile@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 720px 690px;
+      opacity: 1;
+    }
   }
 
   .first-screen__background {

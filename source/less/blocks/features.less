@@ -40,78 +40,54 @@
   &--time {
     position: relative;
   }
-}
 
-.features__item:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: 4px;
+    left: -80px;
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    content: "";
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 29px 26px;
+    opacity: 1;
+  }
 }
 
 .features__item--natural::before {
-  position: absolute;
-  top: 4px;
-  left: -80px;
-  box-sizing: border-box;
-  width: 60px;
-  height: 60px;
-  background-color: #68b738;
-  content: "";
-
   background-image: url("/img/advantage-1.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 29px 26px;
-  opacity: 1;
 }
 
 .features__item--food-form::before {
-  position: absolute;
   top: -3px;
   left: -80px;
-  box-sizing: border-box;
-  width: 60px;
-  height: 60px;
-  background-color: #68b738;
-  content: "";
 
   background-image: url("/img/andvantage-2.png");
-  background-repeat: no-repeat;
-  background-position: center center;
   background-size: 29px 31px;
-  opacity: 1;
 }
 
 .features__item--food::before {
-  position: absolute;
   top: -3px;
   left: -80px;
-  box-sizing: border-box;
-  width: 60px;
-  height: 60px;
-  background-color: #68b738;
-  content: "";
 
   background-image: url("/img/advantage-3.png");
-  background-repeat: no-repeat;
-  background-position: center center;
   background-size: 23px 30px;
-  opacity: 1;
 }
 
 .features__item--time::before {
-  position: absolute;
   top: -3px;
   left: -80px;
-  box-sizing: border-box;
-  width: 60px;
-  height: 60px;
-  background-color: #68b738;
-  content: "";
 
   background-image: url("/img/advantage-4.png");
-  background-repeat: no-repeat;
-  background-position: center center;
   background-size: 26px 31px;
-  opacity: 1;
 }
 
 @media (min-width: @tablet-width) {
@@ -139,13 +115,13 @@
     padding-right: 100px;
     box-sizing: border-box;
     padding-top: 150px;
-  }
 
-  .features__item::before {
-    width: 80px;
-    height: 80px;
-    top: 45px;
-    left: 0;
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: 45px;
+      left: 0;
+    }
   }
 }
 

@@ -40,30 +40,30 @@
   .fonts(16px; 20px; #111111; uppercase);
   margin-bottom: 10px;
   position: relative;
-}
 
-.catalog-products__show::before {
-  position: absolute;
-  top: -33px;
-  left: 50%;
-  transform: translateX(-50%);
-  content: "";
-  display: block;
-  width: 30px;
-  height: 2px;
-  background-color: #d3d3d3;
-}
+  &::before {
+    position: absolute;
+    top: -33px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #d3d3d3;
+  }
 
-.catalog-products__show::after {
-  position: absolute;
-  top: -47px;
-  left: 50%;
-  transform: translateX(-50%);
-  content: "";
-  display: block;
-  width: 2px;
-  height: 30px;
-  background-color: #d3d3d3;
+  &::after {
+    position: absolute;
+    top: -47px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    display: block;
+    width: 2px;
+    height: 30px;
+    background-color: #d3d3d3;
+  }
 }
 
 .catalog-products__tastyes {
@@ -144,14 +144,16 @@
     margin-right: 0;
   }
 
-  .catalog-products__show::before {
-    width: 60px;
-    top: -120px;
-  }
+  .catalog-products__show {
+    &::before {
+      width: 60px;
+      top: -120px;
+    }
 
-  .catalog-products__show::after {
-    height: 60px;
-    top: -148px;
+    &::after {
+      height: 60px;
+      top: -148px;
+    }
   }
 
   .catalog-products__right {
@@ -171,8 +173,10 @@
     padding: 0 70px;
   }
 
-  .catalog-products__table td {
-    border-bottom: 1px solid #cdcdcd;
+  .catalog-products__table {
+    &td {
+      border-bottom: 1px solid #cdcdcd;
+    }
   }
 
   .catalog-products__button {
@@ -199,18 +203,22 @@
     padding: 0 50px;
   }
 
-  .catalog-products__item,
   .catalog-products__item:nth-child(2n) {
     margin-right: 80px;
     width: 245px;
   }
 
-  .catalog-products__item:nth-child(4n) {
-    margin-right: 0;
-  }
+  .catalog-products__item {
+    margin-right: 80px;
+    width: 245px;
 
-  .catalog-products__item:nth-child(7n) {
-    margin-bottom: auto;
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(7n) {
+      margin-bottom: auto;
+    }
   }
 
   .catalog-products__more {
