@@ -1,18 +1,21 @@
 .first-screen {
-  margin-bottom: 20px;
-  outline: 2px solid blue;
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .first-screen__title {
   .fonts(36px; 36px; white; uppercase);
-  padding: 25px 35px;
+  padding: 30px 20px;
   margin: 0;
   text-align: center;
 }
 
 .first-screen__background {
   .background(#65a93c; url("../img/index-background-mobile@1x.jpg"); no-repeat; top center; contain);
-  padding-bottom: 65px;
+  padding-bottom: 165px;
   margin-bottom: 135px;
 }
 
@@ -21,9 +24,105 @@
   text-align: center;
   padding: 10px;
   margin: 0;
-  margin-top: 4px;
+  margin-top: -5px;
 }
 
 .first-screen__choose-program {
+  width: 280px;
+  display: block;
+  box-sizing: border-box;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 0 auto;
   .fonts(14px; 18px; white; normal);
+}
+
+.first-screen__image {
+  display: block;
+  margin-top: -274px;
+  margin-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .first-screen {
+    width: 768px;
+    margin-bottom: 320px; /*временно для сетки*/
+    box-sizing: border-box;
+    padding-bottom: 200px;
+  }
+
+  .first-screen__background {
+    background-image: none;
+    background-color: #ffffff;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .first-screen__title {
+    .fonts(60px; 60px; black; none);
+    width: 546px;
+    min-height: 130px;
+    padding-left: 110px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .first-screen__desc {
+    .fonts(20px; 20px; black; uppercase);
+    text-align: left;
+    padding-left: 110px;
+    box-sizing: border-box;
+  }
+
+  .first-screen__image {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 200px;
+    left: 30%;
+    z-index: -1;
+  }
+
+  .first-screen__choose-program {
+    width: 245px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-right: auto;
+    margin-left: 110px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .first-screen {
+    width: 1440px;
+    margin-bottom: 65px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: -200px;
+      right: 0;
+      box-sizing: border-box;
+      width: 720px;
+      height: 690px;
+      background-color: #63a63b;
+      content: "";
+      z-index: -1;
+
+      background-image: url("../img/index-background-mobile@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 720px 690px;
+      opacity: 1;
+    }
+  }
+
+  .first-screen__background {
+    width: 530px;
+    margin-top: 100px;
+  }
 }
