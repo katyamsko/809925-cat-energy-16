@@ -7,40 +7,40 @@
 }
 
 .first-screen__title {
-  .fonts(36px; 36px; white; uppercase);
-  padding: 30px 20px;
+  .fonts(36px; 36px; white; none);
+  padding: 27px 20px 25px;
   margin: 0;
   text-align: center;
 }
 
 .first-screen__background {
   .background(#65a93c; url("../img/index-background-mobile@1x.jpg"); no-repeat; top center; contain);
-  padding-bottom: 165px;
-  margin-bottom: 135px;
+  padding-bottom: 167px;
+  margin-bottom: 142px;
 }
 
 .first-screen__desc {
   .fonts(14px; 14px; white; uppercase);
-  text-align: center;
-  padding: 10px;
   margin: 0;
-  margin-top: -5px;
+  padding-left: 59px;
 }
 
 .first-screen__choose-program {
   width: 280px;
   display: block;
   box-sizing: border-box;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   margin: 0 auto;
   .fonts(14px; 18px; white; normal);
+  text-align: left;
+  padding-left: 73px;
 }
 
 .first-screen__image {
   display: block;
-  margin-top: -274px;
-  margin-left: 20px;
+  margin-top: -277px;
+  margin-left: 19px;
 }
 
 @media (min-width: @tablet-width) {
@@ -48,7 +48,7 @@
     width: 768px;
     margin-bottom: 320px; /*временно для сетки*/
     box-sizing: border-box;
-    padding-bottom: 200px;
+    padding: 0 30px 210px 30px;
   }
 
   .first-screen__background {
@@ -60,18 +60,21 @@
 
   .first-screen__title {
     .fonts(60px; 60px; black; none);
-    width: 546px;
+    width: 560px;
     min-height: 130px;
-    padding-left: 110px;
+    padding-left: 87px;
+    padding-top: 47px;
     box-sizing: border-box;
     text-align: left;
+    margin-bottom: 16px;
   }
 
   .first-screen__desc {
     .fonts(20px; 20px; black; uppercase);
     text-align: left;
-    padding-left: 110px;
+    padding-left: 88px;
     box-sizing: border-box;
+    margin-bottom: 48px;
   }
 
   .first-screen__image {
@@ -88,9 +91,9 @@
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 16px;
     margin-right: auto;
-    margin-left: 110px;
+    margin-left: 89px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -99,16 +102,16 @@
 @media (min-width: @desktop-width) {
   .first-screen {
     width: 1440px;
-    margin-bottom: 65px;
+    margin-bottom: 61px;
     position: relative;
 
     &::before {
       position: absolute;
-      top: -200px;
+      top: -190px;
       right: 0;
       box-sizing: border-box;
       width: 720px;
-      height: 690px;
+      height: 696px;
       background-color: #63a63b;
       content: "";
       z-index: -1;
@@ -116,13 +119,28 @@
       background-image: url("../img/index-background-mobile@1x.jpg");
       background-repeat: no-repeat;
       background-position: center center;
-      background-size: 720px 690px;
+      background-size: 720px 696px;
       opacity: 1;
     }
   }
 
   .first-screen__background {
     width: 530px;
-    margin-top: 100px;
+    margin-top: 62px;
+  }
+
+  .first-screen__title {
+    width: 650px;
+    padding-left: 161px;
+    padding-top: 32px;
+  }
+
+  .first-screen__desc {
+    padding-left: 161px;
+    margin-bottom: 53px;
+  }
+
+  .first-screen__choose-program {
+    margin-left: 161px;
   }
 }
