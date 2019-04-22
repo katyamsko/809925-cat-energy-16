@@ -42,13 +42,14 @@
 
 
 .social-list__item {
-  margin-right: 38px;
+  margin-right: 31px;
 }
 
 @media (min-width: @tablet-width) {
   .social-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 38px 0 15px 25px;
 
     &::after,
     &::before {
@@ -57,7 +58,8 @@
   }
 
   .social-list__item {
-    padding: 25px;
-    padding-top: 35px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
