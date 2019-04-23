@@ -1,8 +1,9 @@
 .social-list {
   .list(none; 0; 0);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
+  padding: 21px 72px 15px;
 
   &::after {
     position: absolute;
@@ -23,7 +24,7 @@
 
   &::before {
     position: absolute;
-    top: 65px;
+    top: 60px;
     left: 15px;
     box-sizing: border-box;
     width: 280px;
@@ -41,16 +42,14 @@
 
 
 .social-list__item {
-  padding-top: 22px;
-  padding-left: 24px;
-  padding-bottom: 16px;
-  padding-right: 20px;
+  margin-right: 31px;
 }
 
 @media (min-width: @tablet-width) {
   .social-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 38px 0 15px 25px;
 
     &::after,
     &::before {
@@ -59,7 +58,8 @@
   }
 
   .social-list__item {
-    padding: 25px;
-    padding-top: 35px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

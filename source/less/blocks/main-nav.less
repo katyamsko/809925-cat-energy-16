@@ -5,7 +5,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: -60px;
+  top: -56px;
   right: 0;
   z-index: 2;
 
@@ -34,8 +34,8 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-  top: -59px;
-  right: 6px;
+  top: -58px;
+  right: 5px;
   min-height: 51px;
 
   &::before,
@@ -62,7 +62,7 @@
   }
 }
 
-.main-nav--closed .site-list__item {
+.main-nav--closed .main-nav__item {
   display: none;
 }
 
@@ -70,6 +70,7 @@
   .main-nav {
     width: auto;
     margin: 0;
+    padding-right: 30px;
   }
 
   .main-nav__wrapper {
@@ -83,7 +84,7 @@
     display: none;
   }
 
-  .main-nav--closed .site-list__item {
+  .main-nav--closed .main-nav__item {
     display: block;
   }
 }
@@ -91,5 +92,9 @@
 @media (min-width: @desktop-width) {
   .main-nav__wrapper {
     /*width: 650px;*/
+  }
+
+  .main-nav {
+    padding-right: 40px;
   }
 }
