@@ -1,0 +1,142 @@
+.about-us {
+  width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: 16px;
+}
+
+.about-us__title {
+  .fonts(16px; 20px; #111111; uppercase);
+  width: 140px;
+}
+
+.about-us__desc {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+
+.about-us__address {
+  .fonts(14px; 20px; #444444; none; @family: @secondFont);
+  width: 140px;
+}
+
+.about-us__map {
+  margin: 0;
+  padding: 0;
+}
+
+.about-us figure,
+.about-us picture,
+.about-us img {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.about-us--catalog {
+  padding-top: 0;
+}
+
+.about-us__desc--catalog {
+  background-color: #f2f2f2;
+  padding-bottom: 12px;
+  padding-top: 15px;
+  margin-bottom: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .about-us {
+    width: 768px;
+  }
+
+  .about-us__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    padding-left: 41px;
+  }
+
+  .about-us__address {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    width: 165px;
+    padding-top: 16px;
+    padding-right: 42px;
+  }
+
+  .about-us__desc {
+    width: 768px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    align-items: flex-start;
+    margin-bottom: 40px;
+
+    &--catalog {
+      padding-top: 49px;
+      padding-bottom: 38px;
+      margin-bottom: 0;
+    }
+  }
+
+  .about-us__street {
+    display: block;
+    margin-bottom: 19px;
+  }
+
+  .about-us__map {
+    img {
+      display: block;
+      width: 767px;
+      height: 400px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us {
+    width: 100%;
+    max-height: 1440px;
+    padding-top: 0;
+    position: relative;
+  }
+
+  .about-us__desc {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    background-color: white;
+    width: 570px;
+    box-sizing: border-box;
+    padding-top: 64px;
+    padding-left: 35px;
+    padding-bottom: 58px;
+    padding-right: 22px;
+
+    &--catalog {
+      padding-top: 65px;
+    }
+  }
+
+  .about-us__title {
+    margin: 0;
+    width: 170px;
+  }
+
+  .about-us__address {
+    width: 180px;
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .about-us__map img {
+    width: 100%;
+    max-width: 1440px;
+    height: 400px;
+    margin: 0 auto;
+  }
+}

@@ -36,7 +36,135 @@
         </div>
       </nav>
     </header>
-    <main></main>
+    <main class="form-main">
+      <h1 class = "form-main__title"> Подбор программы
+      </h1>
+      <h2 class="form-main__profile-title">
+        Заполните анкету и мы подберем программу питания для вашего кота
+      </h2>
+      <form class="form-main__profile-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="form-main__required">
+          <fieldset class="form-main__profile">
+            <label class="form-main__label" for="name-field">
+              <span>Имя:<sup>*</sup> </span>
+              <input type="text" id="name-field" name="name" placeholder="Барсик">
+            </label>
+            <label class="form-main__label" for="weight-field">
+              <span> Вес (КГ):<sup>*</sup></span>
+              <input type="text" id="weight-field" name="weight" placeholder="7">
+            </label>
+            <label class="form-main__label" for="age-field">
+              <span> Возраст (лет):<sup>*</sup></span>
+              <input type="text" id="age-field" name="age" placeholder="7">
+            </label>
+          </fieldset>
+          <fieldset class="form-main__filter">
+            <ul class="form-main__radio">
+              <li class="form-main__filter-option">
+                <input class="form-main__input--radio visually-hidden" type="radio" name="purpose" value="weight-loss" id="slim-field" checked>
+                <label class="form-main__label--radio" for="slim-field">Похудение</label>
+              </li>
+              <li class="form-main__filter-option">
+                <input class="form-main__input--radio visually-hidden" type="radio" name="purpose" value="weight-gain" id="pro-field">
+                <label class="form-main__label--radio" for="pro-field">Набор массы</label>
+              </li>
+              <li class="form-main__filter-option">
+                <input  class ="form-main__input--radio visually-hidden" type="radio" name="purpose" value="underfined" id="question-field">
+                <label class="form-main__label--radio" for="question-field">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <fieldset class="form-main__owner">
+          <legend class="form-main__owner-title">
+            Контактные данные (владельца кота)
+          </legend>
+          <!-- <h3 class="form-main__owner-title">
+            Контактные данные (владельца кота)
+          </h3> -->
+          <div class="form-main__container">
+            <label class="form-main__label--contact" for="email-field">
+              <span> e-mail:
+                <sup>*</sup>
+              </span>
+              <input type="email" id="email-field" name="email" placeholder="KUKLACHEV@GMAIL.COM">
+            </label>
+            <label class="form-main__label--contact" for="tel">
+              <span>Телефон:<sup>*</sup></span>
+              <input type="tel" id="tel" name="telefon" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}" placeholder="8 (960) 900-60-90">
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="form-main__comment">
+          <legend class="form-main__owner-comment">
+            Комментарий
+          </legend>
+          <!-- <h3 class="form-main__owner-comment">
+            Комментарий
+          </h3> -->
+          <textarea class="form-main__text" name="comment" id="comment-field" rows="10">
+            Расскажите обо всех повадках кота
+          </textarea>
+        </fieldset>
+        <fieldset class="form-main__additional">
+          <legend class="form-main__additional-title">
+            Дополнительно
+          </legend>
+          <!-- <h3 class="form-main__additional-title">
+            Дополнительно
+          </h3> -->
+          <ul class = "form-main__additional-products">
+            <li class = "form-main__additional-item">
+              <input class="form-main__checkbox visually-hidden" type="checkbox" name="extra-ingredients" id="sweetener-field" value="sweetener" checked>
+              <label class="form-main__label--checkbox" for="sweetener-field">Сахарозаменитель</label>
+            </li>
+            <li class = "form-main__additional-item">
+              <input class="form-main__checkbox visually-hidden" type="checkbox" name="extra-ingredients" value="water" id="water-field">
+              <label class="form-main__label--checkbox" for="water-field">Питьевая вода</label>
+            </li>
+            <li class = "form-main__additional-item">
+              <input class="form-main__checkbox visually-hidden" type="checkbox" name="extra-ingredients" value="milk" id="milk-field">
+              <label class="form-main__label--checkbox" for="milk-field">Молоко</label>
+            </li>
+            <li class = "form-main__additional-item">
+              <input class="form-main__checkbox visually-hidden" type="checkbox" name="extra-ingredients" value="vitamins" id="vitamins-field">
+              <label class="form-main__label--checkbox" for="vitamins-field">Витамины</label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="form-main__bottom">
+          <button type="submit" class="form-main__button button">
+            Отправить заявку
+          </button>
+          <span class="form-main__text--note">
+            <sup>*</sup>
+            — Обязательные поля
+          </span>
+        </div>
+      </form>
+      <section class="about-us about-us--catalog">
+        <div class="about-us__desc about-us__desc--catalog">
+          <h2 class="about-us__title">
+            Приглашаем к&nbsp;сотрудничеству дилеров!
+          </h2>
+          <address class="about-us__address">
+            <span class="about-us__street">
+              ул. Большая Конюшенная, д. 19/8
+            </span>
+            <span class="about-us__city">
+              Санкт-Петербург
+            </span>
+          </address>
+        </div>
+        <figure class="about-us__map">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img class="map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="360" alt="Карта">
+          </picture>
+        </figure>
+      </section>
+    </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a href="index.html" class="page-footer__logo">
