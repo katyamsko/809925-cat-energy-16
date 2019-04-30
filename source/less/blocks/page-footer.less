@@ -1,7 +1,6 @@
-.page-footer {
+/*.page-footer {
   background-color: #f2f2f2;
-}
-
+}*/
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
@@ -29,6 +28,7 @@
   align-items: center;
   padding-top: 23px;
   padding-bottom: 23px;
+  text-decoration: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -41,10 +41,18 @@
 
   .page-footer__copyright {
     padding-top: 20px;
+    padding-bottom: 19px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .page-footer {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+  }
+
   .page-footer__wrapper {
     width: 1220px;
     justify-content: space-between;

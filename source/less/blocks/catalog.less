@@ -70,12 +70,27 @@
 
     content: "";
 
-    background-image: url("/img/arrow.png");
+    background-image: url("/img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 24px 11px;
     opacity: 1;
   }
+
+  &:hover {
+    &::after {
+      width: 34px;
+      height: 11px;
+      background-image: url("/img/icon-right-arrow-verylong.svg");
+      background-size: 34px 11px;
+   }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.3;
+    };
+  };
 }
 
 .catalog__title--slim {
