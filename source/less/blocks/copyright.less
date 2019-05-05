@@ -1,5 +1,29 @@
 .copyright__link {
   .fonts(16px; 16px; #444444; none; @family: @secondFont);
+
+  &:hover {
+    color: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__logo {
+  padding-top: 2px;
+
+  svg {
+    fill: #666666;
+  }
+
+  &:hover svg {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {

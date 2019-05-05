@@ -2,22 +2,21 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <title>HTML Academy | Подбор программы</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald&subset=cyrillic" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/normalize.css">
   </head>
   <body>
     <header class="page-header">
-      <a href="#" class="page-header__logo">
+      <a href="index.html" class="page-header__logo">
         <picture>
           <source media="(min-width: 1300px)" srcset="/img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="/img/logo-tablet.svg">
           <img class="page-header__logo-img" src="/img/logo-mobile.svg" width="191" height="38" alt="Кэт Энерджи">
         </picture>
       </a>
-      <nav class="page-header__menu main-nav main-nav--closed">
+      <nav class="page-header__menu main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -36,78 +35,180 @@
         </div>
       </nav>
     </header>
-    <main></main>
+    <main class="form-main">
+      <h1 class = "form-main__title"> Подбор программы
+      </h1>
+      <h2 class="form-main__profile-title">
+        Заполните анкету и мы подберем программу питания для вашего кота
+      </h2>
+      <form class="form-main__profile-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="form-main__required">
+          <fieldset class="form-main__profile">
+            <label class="form-main__label" for="name-field">
+              <span>Имя:<sup>*</sup> </span>
+              <input type="text" id="name-field" name="name" placeholder="Барсик" required>
+            </label>
+            <label class="form-main__label" for="weight-field">
+              <span> Вес (КГ):<sup>*</sup></span>
+              <input type="text" id="weight-field" name="weight" placeholder="7" required>
+            </label>
+            <label class="form-main__label" for="age-field">
+              <span> Возраст (лет):<sup>*</sup></span>
+              <input type="text" id="age-field" name="age" placeholder="7" required>
+            </label>
+          </fieldset>
+          <fieldset class="form-main__filter">
+            <ul class="form-main__radio">
+              <li class="form-main__filter-option">
+                <input class="form-main__input--radio visually-hidden" type="radio" name="purpose" value="weight-loss" id="slim-field" checked>
+                <label class="form-main__label--radio" for="slim-field">Похудение</label>
+              </li>
+              <li class="form-main__filter-option">
+                <input class="form-main__input--radio visually-hidden" type="radio" name="purpose" value="weight-gain" id="pro-field">
+                <label class="form-main__label--radio" for="pro-field">Набор массы</label>
+              </li>
+              <li class="form-main__filter-option">
+                <input  class ="form-main__input--radio visually-hidden" type="radio" name="purpose" value="underfined" id="question-field">
+                <label class="form-main__label--radio" for="question-field">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <fieldset class="form-main__owner">
+          <legend class="form-main__owner-title">
+            Контактные данные (владельца кота)
+          </legend>
+          <div class="form-main__container">
+            <label class="form-main__label--contact" for="email-field">
+              <span> e-mail:
+                <sup>*</sup>
+              </span>
+              <input type="email" id="email-field" name="email" placeholder="KUKLACHEV@GMAIL.COM" required>
+              <span class="form-main__icon-mail">
+                <svg width="18" height="13">
+                  <use xlink:href="#icon-mail"></use>
+                </svg>
+              </span>
+            </label>
+            <label class="form-main__label--contact" for="tel">
+              <span>Телефон:<sup>*</sup></span>
+              <input type="tel" id="tel" name="telefon" pattern="8 [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90" required>
+              <span class="form-main__icon-phone">
+                <svg width="20" height="20">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="form-main__comment">
+          <legend class="form-main__owner-comment">
+            Комментарий
+          </legend>
+          <textarea class="form-main__text" name="comment" id="comment-field" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <fieldset class="form-main__additional">
+          <legend class="form-main__additional-title">
+            Дополнительно
+          </legend>
+          <ul class = "form-main__additional-products">
+            <li class = "form-main__additional-item">
+              <input class="form-main__checkbox visually-hidden" type="checkbox" name="extra-ingredients" id="sweetener-field" value="sweetener" checked>
+              <label class="form-main__label--checkbox" for="sweetener-field">Сахарозаменитель</label>
+            </li>
+            <li class = "form-main__additional-item">
+              <input class="form-main__checkbox visually-hidden" type="checkbox" name="extra-ingredients" value="water" id="water-field">
+              <label class="form-main__label--checkbox" for="water-field">Питьевая вода</label>
+            </li>
+            <li class = "form-main__additional-item">
+              <input class="form-main__checkbox visually-hidden" type="checkbox" name="extra-ingredients" value="milk" id="milk-field">
+              <label class="form-main__label--checkbox" for="milk-field">Молоко</label>
+            </li>
+            <li class = "form-main__additional-item">
+              <input class="form-main__checkbox visually-hidden" type="checkbox" name="extra-ingredients" value="vitamins" id="vitamins-field">
+              <label class="form-main__label--checkbox" for="vitamins-field">Витамины</label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="form-main__bottom">
+          <button type="submit" class="form-main__button button">
+            Отправить заявку
+          </button>
+          <span class="form-main__text--note">
+            <sup>*</sup>
+            — Обязательные поля
+          </span>
+        </div>
+      </form>
+      <section class="about-us about-us--form">
+        <div class="about-us__wrapper">
+          <div class="about-us__desc">
+            <h2 class="about-us__title">
+              Приглашаем к&nbsp;сотрудничеству дилеров!
+            </h2>
+            <address class="about-us__address">
+              <span class="about-us__street">
+                ул. Большая Конюшенная, д. 19/8
+              </span>
+              <span class="about-us__city">
+                Санкт-Петербург
+              </span>
+            </address>
+          </div>
+          <div class="about-us__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.3825302588587!2d30.323177573893844!3d59.93855998228395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca640933%3A0x8403eb878242dbd5!2z0JTQvtGF0L7QtNC90YvQuSDQtNC-0Lwg0J0uINCQLiDQnNC10LvRjNGG0LXRgNCw!5e0!3m2!1sru!2sru!4v1556877993181!5m2!1sru!2sru" width="320" height="362" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a href="index.html" class="page-footer__logo">
-          <img class="page-footer__logo-img" src="/img/logo-footer.svg" width="128" height="24" alt="Кэт Энерджи">
+          <svg class="page-footer__logo-img" width="128" height="24">
+            <use xlink:href="#icon-logo-footer"></use>
+          </svg>
         </a>
         <ul class="page-footer__social social-list">
           <li class="social-list__item">
             <a class="social-list__link social-list__link--vkontakte" href="#">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve" width="22px" height="12px">
-                <g>
-                  <path
-                    d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
-                  c0,0.1,0,0.6-0.3,0.9c-0.3,0.3-0.8,0.4-0.9,0.4l-1.4,0c-0.7,0-3.2-0.2-5.4-2.3C2.5,7.1,0.2,2.2,0.1,2C0,1.6-0.1,1.2,0.2,0.9
-                  c0.3-0.3,0.8-0.4,1-0.4l3,0l0.1,0c0.1,0,0.4,0.1,0.7,0.3c0.3,0.2,0.4,0.5,0.5,0.6c0,0,0.5,1.1,1.1,2c1,1.5,1.4,1.9,1.5,2
-                  C8.2,5,8.3,4,8.2,3.1c0-0.4-0.1-0.8-0.2-1C7.9,2,7.7,1.9,7.5,1.9L6.9,1.4C6.9,0.9,7.4,0.5,7.8,0.3C8.3,0.1,9.1,0,10.1,0l0.5,0
-                  c0.9,0,1.2,0.1,1.6,0.1c1.2,0.3,1.2,1.3,1.1,2.5c0,0.4,0,0.8,0,1.2c0,0.1,0,0.2,0,0.4c0,0.3,0,0.8,0.1,1c0.2-0.1,0.6-0.5,1.5-1.9
-                  c0.6-0.9,1-1.9,1.1-2.1l0,0c0.1-0.3,0.4-0.7,1.2-0.7l3.1,0c0,0,0.1,0,0.3,0c0.7,0,1.2,0.2,1.3,0.7c0.2,0.5,0.1,1.3-1.7,3.5
-                  c-0.3,0.3-0.5,0.6-0.7,0.9C19,6,18.6,6.6,18.6,6.7c0,0.1,0.5,0.5,0.9,0.9c1.1,0.9,1.9,1.7,2.2,2.3c0.4,0.6,0.3,1,0.2,1.3
-                  c-0.3,0.7-1.2,0.7-1.4,0.8l-2.8,0C17.7,12,17.6,12,17.6,12z M13.7,8.3c0.7,0,1.2,0.6,1.8,1.2c0.4,0.4,0.7,0.8,1.1,1
-                  c0.5,0.3,1,0.3,1,0.3l0.1,0l2.8,0c0.1,0,0.3-0.1,0.4-0.1c0,0,0-0.1-0.1-0.1c-0.3-0.5-1-1.3-2-2.1c-0.9-0.7-1.3-1.1-1.4-1.7
-                  c0-0.6,0.4-1.1,1.2-2.1c0.2-0.2,0.4-0.5,0.7-0.8c1.1-1.4,1.4-2,1.5-2.3c-0.1,0-0.5,0-0.5,0l-3.2,0c-0.1,0-0.2,0-0.2,0
-                  C16.9,2,16.4,3.1,15.8,4c-1.4,2.1-2,2.4-2.5,2.4c-0.1,0-0.3,0-0.4-0.1c-0.7-0.4-0.7-1.4-0.7-2.1c0-0.1,0-0.2,0-0.3
-                  c0-0.5,0-0.9,0-1.3c0.1-1.3,0-1.3-0.3-1.4c-0.3-0.1-0.5-0.1-1.4-0.1l-0.5,0c-0.5,0-1,0-1.4,0.1c0.1,0.1,0.1,0.1,0.2,0.2
-                  c0.4,0.5,0.4,1.5,0.4,1.7c0.1,1.3,0,2.9-0.7,3.3C8.4,6.4,8.3,6.5,8.1,6.5C7.5,6.5,6.8,5.8,5.6,4C5,2.9,4.5,1.8,4.5,1.8
-                  c0,0,0-0.1-0.1-0.1c-0.1,0-0.2-0.1-0.2-0.1l-2.9,0c0,0,0,0-0.1,0c0.4,0.9,2.5,5,4.8,7.2c2,1.9,4.3,2,4.7,2l1.4,0c0,0,0.2,0,0.2-0.1
-                  c0,0,0,0,0-0.1c0-0.2,0-2,1.2-2.3C13.5,8.3,13.6,8.3,13.7,8.3z"/>
-                </g>
+              <svg width="22" height="12">
+                <use xlink:href="#icon-vk-mobile"></use>
               </svg>
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--instagram" href="#">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve" width="16" height="16">
-              <style type="text/css">
-                .st0 {
-                  fill: #231F20;
-                }
-                </style>
-                <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1
-                L11.8,1 M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0L11.8,0z"/>
-                <path class="st0" d="M8,4.9c1.7,0,3.1,1.4,3.1,3.1c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1C4.9,6.3,6.3,4.9,8,4.9 M8,3.9
-                C5.7,3.9,3.9,5.7,3.9,8s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S10.3,3.9,8,3.9L8,3.9z"/>
-                <circle class="st0" cx="12.3" cy="3.7" r="0.9"/>
+              <svg width="16" height="16">
+                <use xlink:href="#icon-insta"></use>
               </svg>
               <span class="visually-hidden">Инстаграм</span>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--fb" href="#">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve" width="16" height="19">
-              <g>
-                <path
-                  d="M7.1,19H2v-8.8H0V5.8h1.9c-0.1-2,0.2-3.4,1.1-4.4C3.8,0.5,5,0.1,6.5,0L10,0v4.2H7.2C7.1,4.4,7,5,7,5.8H10v4.4H7.1V19z
-                  M3.1,18h2.8V9.1h2.9V6.8H5.9l0-0.5c0-1.4,0-2.6,0.7-3.1l0.1-0.1h2.1V1H6.5c-1.2,0.1-2,0.4-2.6,1c-0.8,0.8-1,2.3-0.8,4.2l0.1,0.6
-                H1.1v2.3h2V18z"/>
-              </g>
+              <svg width="16" height="19">
+                <use xlink:href="#icon-fb-mobile"></use>
               </svg>
               <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
         </ul>
         <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="#">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
             HTML Academy
           </a>
-          <svg class="copyright__logo" xmlns="http://www.w3.org/2000/svg" viewBox="10 10 40 40" width="27" height="34"><path fill="#666666" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
-          </svg>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo">
+            <svg width="27" height="34">
+              <use xlink:href="#icon-htmlacademy"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </footer>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <script>
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');
@@ -123,6 +224,46 @@
           navMain.classList.remove('main-nav--opened');
         }
       });
+
+      var button = document.querySelector('.form-main__button');
+      var invalidForm = document.querySelectorAll('.form-main__label');
+
+      var array = [];
+      for (var i=0; i<invalidForm.length; i++) {
+        array[i] = invalidForm[i].querySelector('input');
+      }
+      var invalidLabel = document.querySelectorAll('.form-main__label--contact');
+      var arrayInput = [];
+      for (var k=0; k<invalidLabel.length; k++) {
+        arrayInput[k] = invalidLabel[k].querySelector('input');
+      }
+
+
+      button.addEventListener('click', function() {
+        for (var j = 0; j<array.length; j++) {
+          if (array[j].value === '') {
+            event.preventDefault();
+            array[j].classList.add('form-main__invalid');
+          }
+          else {
+            if (array[j].value !== '') {
+              array[j].classList.remove('form-main__invalid');
+            }
+        }
+      }
+      for (var n = 0; n<arrayInput.length; n++) {
+        if (arrayInput[n].value === '') {
+          event.preventDefault();
+          arrayInput[n].classList.add('form-main__invalid');
+        }
+        else {
+          if (arrayInput[n].value !== '') {
+            arrayInput[n].classList.remove('form-main__invalid');
+          }
+        }
+      }
+    });
+
     </script>
   </body>
 </html>

@@ -2,7 +2,7 @@
   width: 320px;
   box-sizing: border-box;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 29px;
   padding: 0 20px;
 }
 
@@ -15,7 +15,6 @@
 .catalog-products__item {
   display: flex;
   flex-wrap: wrap;
-  /*margin-bottom: 30px;*/
   border-bottom: 2px solid #ededed;
 }
 
@@ -34,7 +33,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-top: 77px;
+  padding-top: 78px;
 }
 
 .catalog-products__show {
@@ -78,7 +77,6 @@
   height: 40px;
   box-sizing: border-box;
   order: 2;
-  /*width: 100%;*/
   padding-top: 10px;
   padding-bottom: 10px;
   margin: 0 auto;
@@ -87,8 +85,16 @@
   line-height: 20px;
 
   &--show {
+    .fonts(16px; 20px; #444444; uppercase);
     background-color: #f2f2f2;
-    color: #444444;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -101,19 +107,19 @@
   order: 1;
   width: 140px;
   box-sizing: border-box;
-  /*margin-left: auto;*/
 }
 
 .catalog-products__title {
   box-sizing: border-box;
   margin: 0;
-  margin-top: 18px;
+  margin-top: 19px;
   margin-bottom: 10px;
   padding-right: 45px;
 }
 
 .catalog-products__row {
-  /*padding-bottom: 2px;*/
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .catalog-products__row:nth-child(even) {
@@ -122,8 +128,9 @@
 
 @media (min-width: @tablet-width) {
   .catalog-products {
-    width: auto;
-    padding: 0;
+    width: 768px;
+    padding: 0 30px;
+    margin-bottom: 91px;
   }
 
   .catalog-products__list {
@@ -136,7 +143,7 @@
   .catalog-products__item {
     background-color: #f2f2f2;
     width: 325px;
-    margin-bottom: 141px;
+    margin-bottom: 142px;
     position: relative;
     padding-bottom: 38px;
     padding-top: 145px;
@@ -225,7 +232,7 @@
   .catalog-products__table {
     font-size: 16px;
     line-height: 16px;
-    margin-bottom: 35px;
+    margin-bottom: 33px;
 
     &td {
       border-bottom: 1px solid #cdcdcd;
@@ -255,7 +262,10 @@
   }
 
   .catalog-products {
-    padding: 0;
+    width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+    margin-bottom: 97px;
   }
 
   .catalog-products__title {
@@ -277,6 +287,12 @@
 
     &:nth-child(7n) {
       margin-bottom: auto;
+    }
+
+    &:nth-child(5),
+    &:nth-child(6),
+    &:nth-child(7) {
+      margin-bottom: 0;
     }
   }
 

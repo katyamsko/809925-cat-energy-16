@@ -1,7 +1,7 @@
 .catalog {
   width: 320px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 21px;
   margin-bottom: 16px;
 }
 
@@ -27,7 +27,7 @@
 
 .catalog__title {
   .fonts(24px; 37px; black; uppercase);
-  padding: 11px 53px 8px 70px;
+  padding: 11px 53px 8px 71px;
   margin: 0 auto;
 
   &::before {
@@ -70,11 +70,26 @@
 
     content: "";
 
-    background-image: url("/img/arrow.png");
+    background-image: url("/img/right-arrow-long.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 24px 11px;
     opacity: 1;
+  }
+
+  &:hover {
+    &::after {
+      width: 34px;
+      height: 11px;
+      background-image: url("/img/right-arrow-verylong.svg");
+      background-size: 34px 11px;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -91,7 +106,7 @@
 
     content: "";
 
-    background-image: url("/img/icon-cat-slim.svg");
+    background-image: url("/img/cat-slim.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 35px 49px;
@@ -100,7 +115,7 @@
 }
 
 .catalog__title--pro {
-  padding: 10px 10px 7px 70px;
+  padding: 10px 10px 7px 71px;
   position: relative;
 
   &::before {
@@ -119,7 +134,7 @@
 
     content: "";
 
-    background-image: url("/img/icon-cat-pro.svg");
+    background-image: url("/img/cat-pro.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 67px 28px;
@@ -132,16 +147,18 @@
     width: 768px;
     padding: 0 30px;
     box-sizing: border-box;
-    margin-bottom: 47px;
+    margin-bottom: 46px;
   }
 
   .catalog__list {
     margin: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .catalog__item {
     box-sizing: border-box;
-    width: 710px;
+    width: 100%;
     min-height: 370px;
     margin-bottom: 32px;
   }
@@ -151,7 +168,7 @@
     width: 375px;
     border-bottom: none;
     margin-left: 31px;
-    padding-bottom: 32px;
+    padding-bottom: 30px;
     margin-top: 18px;
     box-sizing: border-box;
 
@@ -182,7 +199,6 @@
     }
 
     &::after {
-      background-image: url("/img/cat-slim.png");
       top: 60px;
       left: 455px;
       width: 140px;
@@ -214,7 +230,6 @@
     padding-top: 56px;
 
     &::after {
-      background-image: url("/img/cat-pro.png");
       top: 115px;
       left: 392px;
       width: 268px;
@@ -243,7 +258,7 @@
   .catalog {
     width: 1300px;
     padding: 0 40px;
-    margin-bottom: 33px;
+    margin-bottom: 34px;
   }
 
   .catalog__list {
@@ -271,7 +286,7 @@
   .catalog__title--slim {
     &::before {
       position: absolute;
-      top: 3px;
+      top: 5px;
       left: 32px;
       box-sizing: border-box;
       width: 100px;
@@ -286,15 +301,12 @@
 
     &::after {
       position: absolute;
-      top: -3px;
+      top: -1px;
       left: 46px;
       box-sizing: border-box;
       width: 70px;
       height: 97px;
-
       content: "";
-
-      background-image: url("/img/cat-slim2.png");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 70px 97px;
@@ -308,8 +320,8 @@
 
     &::before {
       position: absolute;
-      top: 4px;
-      left: 31px;
+      top: 5px;
+      left: 32px;
       box-sizing: border-box;
       width: 100px;
       height: 100px;
@@ -323,15 +335,12 @@
 
     &::after {
       position: absolute;
-      top: 26px;
+      top: 27px;
       left: 14px;
       box-sizing: border-box;
       width: 134px;
       height: 56px;
-
       content: "";
-
-      background-image: url("/img/cat-pro2.png");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 134px 56px;
@@ -345,7 +354,7 @@
     margin: 0;
     padding: 0;
     margin-bottom: 30px;
-    margin-top: 66px;
+    margin-top: 67px;
     margin-left: 31px;
   }
 

@@ -1,7 +1,6 @@
 .page-header {
   width: 320px;
   margin: 0 auto;
-  margin-bottom: 2px;
 }
 
 .page-header__logo {
@@ -9,9 +8,17 @@
 }
 
 .page-header__logo-img {
-  padding-bottom: 12px;
+  padding-bottom: 9px;
   padding-left: 20px;
-  padding-top: 12px;
+  padding-top: 14px;
+}
+
+.page-header__logo:hover .page-header__logo-img {
+  opacity: 0.8;
+}
+
+.page-header__logo:active .page-header__logo-img {
+  opacity: 0.6;
 }
 
 @media (min-width: @tablet-width) {

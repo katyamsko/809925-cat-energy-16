@@ -8,7 +8,7 @@
 
 .first-screen__title {
   .fonts(36px; 36px; white; none);
-  padding: 27px 20px 25px;
+  padding: 27px 20px 26px;
   margin: 0;
   text-align: center;
 }
@@ -43,7 +43,7 @@
 
 .first-screen__image {
   display: block;
-  margin-top: -283px;
+  margin-top: -281px;
   margin-left: 19px;
   margin-bottom: 4px;
 }
@@ -68,7 +68,7 @@
     width: 560px;
     min-height: 130px;
     padding-left: 87px;
-    padding-top: 47px;
+    padding-top: 49px;
     box-sizing: border-box;
     text-align: left;
     margin-bottom: 16px;
@@ -86,7 +86,7 @@
     position: absolute;
     margin: 0;
     padding: 0;
-    top: 249px;
+    top: 251px;
     left: 3.9%;
     z-index: -1;
     width: 709px;
@@ -108,18 +108,19 @@
 
 @media (min-width: @desktop-width) {
   .first-screen {
-    width: 1300px;
-    margin-bottom: 61px;
+    width: 100%;
+    margin-bottom: 59px;
     position: relative;
-    padding-top: 5px;
+    padding: 0;
+    padding-bottom: 210px;
 
     &::before {
       position: absolute;
       top: -190px;
-      left: 649px;
+      right: 0;
       box-sizing: border-box;
-      width: 720px;
-      height: 763px;
+      width: 50%;
+      height: 702px;
       background-color: #63a63b;
       content: "";
       z-index: -1;
@@ -127,7 +128,7 @@
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
       background-position: center center;
-      background-size: 720px 760px;
+      background-size: cover;
       opacity: 1;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -137,29 +138,40 @@
   }
 
   .first-screen__background {
-    width: 530px;
+    width: 1300px;
+    margin: 0 auto;
     margin-top: 62px;
+    padding: 0 40px;
+    background-color: transparent;
+    box-sizing: border-box;
   }
 
   .first-screen__title {
     width: 650px;
-    padding-left: 90px;
-    padding-top: 32px;
+    padding-left: 80px;
+    padding-top: 39px;
   }
 
   .first-screen__desc {
-    padding-left: 90px;
+    padding-left: 80px;
     margin-bottom: 53px;
   }
 
+  .first-screen__link-wrapper {
+    width: 1300px;
+    padding: 0 40px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
   .first-screen__choose-program {
-    margin-left: 90px;
+    margin-left: 80px;
   }
 
   .first-screen__image {
     width: 552px;
     height: 499px;
-    top: 18px;
-    left: 37.6%;
+    top: -42px;
+    left: 38.9%;
   }
 }
