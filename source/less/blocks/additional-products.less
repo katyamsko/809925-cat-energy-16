@@ -36,8 +36,8 @@
 
 .additional-products__item {
   border-bottom: 1px solid #cdcdcd;
-  padding-top: 14px;
-  padding-bottom: 16px;
+  padding-top: 13px;
+  padding-bottom: 17px;
 
   &:first-child {
     border-top: 1px solid #cdcdcd;
@@ -91,7 +91,7 @@
     top: 59px;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url("../img/icon-gift.svg");
+    background-image: url("../img/gift.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -105,16 +105,16 @@
 
 @media (min-width: @tablet-width) {
   .additional-products {
-    width: 100%;
+    width: 768px;
     padding: 0 30px;
     border-top: 3px solid #68b738;
-    margin-bottom: 75px;
+    margin-bottom: 76px;
   }
 
   .additional-products__title {
-    margin-top: -26px;
+    margin-top: -25px;
     background-color: white;
-    padding: 0 36px;
+    padding: 0 21px 0 36px;
     font-size: 36px;
     line-height: 36px;
     font-weight: 500;
@@ -168,7 +168,7 @@
   }
 
   .additional-products__list {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
   }
 
   .additional-products__text {
@@ -176,7 +176,7 @@
   }
 
   .additional-products__sale {
-    padding: 55px 113px 53px 423px;
+    padding: 56px 113px 52px 423px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -192,17 +192,34 @@
 
 @media (min-width: @desktop-width) {
   .additional-products {
-    padding: 0 72px;
-    margin-bottom: 15px;
+    width: 100%;
+    max-width: 1440px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+    padding: 0;
   }
 
   .additional-products__title {
-    width: 340px;
+    width: 1300px;
+    margin: -26px auto 81px;
+    box-sizing: border-box;
+    padding: 0 40px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 882px;
+      height: 3px;
+      left: 418px;
+      top: 23px;
+      background-color: #68b738;
+    }
   }
 
   .additional-products__list {
     width: 895px;
-    padding-left: 38px;
   }
 
   .additional-products__item {
@@ -228,10 +245,11 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%;
+    width: 1300px;
+    margin: 0 auto;
     flex-direction: row;
     box-sizing: border-box;
-    padding-right: 38px;
+    padding: 0 40px;
     align-items: flex-start;
   }
 
