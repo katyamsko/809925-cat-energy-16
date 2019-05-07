@@ -3,7 +3,7 @@
   margin: @margin;
 }
 
-.fonts(@size; @height; @color; @transform; @family: @mainFont; @style: normal; @decoration: none) {
+.fonts(@size; @height; @color; @transform; @family: @mainFont; @style: normal; @decoration: none; @fontWeight: 500) {
   font-family: @family;
   font-size: @size;
   line-height: @height;
@@ -11,6 +11,7 @@
   font-style: @style;
   text-transform: @transform;
   text-decoration: @decoration;
+  font-weight: @fontWeight;
 }
 
 .list(@style; @padding; @margin) {

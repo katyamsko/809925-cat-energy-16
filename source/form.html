@@ -2,9 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
     <title>HTML Academy | Подбор программы</title>
-    <link href="https://fonts.googleapis.com/css?family=Oswald&subset=cyrillic" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body>
@@ -60,15 +63,15 @@
           <fieldset class="form-main__filter">
             <ul class="form-main__radio">
               <li class="form-main__filter-option">
-                <input class="form-main__input--radio visually-hidden" type="radio" name="purpose" value="weight-loss" id="slim-field" checked>
+                <input class="form-main__input-radio visually-hidden" type="radio" name="purpose" value="weight-loss" id="slim-field" checked>
                 <label class="form-main__label--radio" for="slim-field">Похудение</label>
               </li>
               <li class="form-main__filter-option">
-                <input class="form-main__input--radio visually-hidden" type="radio" name="purpose" value="weight-gain" id="pro-field">
+                <input class="form-main__input-radio visually-hidden" type="radio" name="purpose" value="weight-gain" id="pro-field">
                 <label class="form-main__label--radio" for="pro-field">Набор массы</label>
               </li>
               <li class="form-main__filter-option">
-                <input  class ="form-main__input--radio visually-hidden" type="radio" name="purpose" value="underfined" id="question-field">
+                <input  class ="form-main__input-radio visually-hidden" type="radio" name="purpose" value="underfined" id="question-field">
                 <label class="form-main__label--radio" for="question-field">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
@@ -229,41 +232,39 @@
       var invalidForm = document.querySelectorAll('.form-main__label');
 
       var array = [];
-      for (var i=0; i<invalidForm.length; i++) {
+      for (var i = 0; i < invalidForm.length; i ++) {
         array[i] = invalidForm[i].querySelector('input');
       }
+
       var invalidLabel = document.querySelectorAll('.form-main__label--contact');
       var arrayInput = [];
-      for (var k=0; k<invalidLabel.length; k++) {
+      for (var k = 0; k < invalidLabel.length; k ++) {
         arrayInput[k] = invalidLabel[k].querySelector('input');
       }
-
 
       button.addEventListener('click', function() {
         for (var j = 0; j<array.length; j++) {
           if (array[j].value === '') {
             event.preventDefault();
             array[j].classList.add('form-main__invalid');
-          }
-          else {
+          } else {
             if (array[j].value !== '') {
               array[j].classList.remove('form-main__invalid');
             }
-        }
-      }
-      for (var n = 0; n<arrayInput.length; n++) {
-        if (arrayInput[n].value === '') {
-          event.preventDefault();
-          arrayInput[n].classList.add('form-main__invalid');
-        }
-        else {
-          if (arrayInput[n].value !== '') {
-            arrayInput[n].classList.remove('form-main__invalid');
           }
         }
-      }
-    });
 
+        for (var n = 0; n < arrayInput.length; n ++) {
+          if (arrayInput[n].value === '') {
+            event.preventDefault();
+            arrayInput[n].classList.add('form-main__invalid');
+          } else {
+            if (arrayInput[n].value !== '') {
+              arrayInput[n].classList.remove('form-main__invalid');
+            }
+          }
+        }
+      });
     </script>
   </body>
 </html>
