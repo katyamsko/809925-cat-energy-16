@@ -84,24 +84,24 @@
 @media (min-width: @tablet-width) {
   .about-us {
     width: 100%;
-    padding-top: 16px;
-
-    &--catalog {
-      padding-top: 0;
-    }
-
-    .about-us__desc {
-      padding: 48px 30px 43px 30px;
-    }
+    padding-top: 0;
 
     &--form {
       background-color: #f2f2f2;
       margin-bottom: 0;
 
       .about-us__desc {
-        padding: 35px 30px 45px 30px;
+        padding: 49px 30px 45px 30px;
         margin-bottom: 0;
       }
+    }
+  }
+
+  .about-us--catalog {
+    padding-top: 0;
+
+    .about-us__desc {
+      padding: 48px 30px 45px;
     }
   }
 
@@ -123,11 +123,11 @@
 
   .about-us__desc {
     width: 768px;
-    padding: 0 30px;
+    padding: 46px 30px 45px 30px;
     margin: 0 auto;
     box-sizing: border-box;
     align-items: flex-start;
-    margin-bottom: 44px;
+    margin-bottom: 0;
 
     &--catalog {
       padding-top: 49px;
@@ -165,11 +165,6 @@
       .about-us__title {
         padding-top: 2px;
       }
-
-      .about-us__desc {
-        background-color: white;
-        padding: 62px 23px 56px 34px;
-      }
     }
   }
 
@@ -187,9 +182,14 @@
     padding-left: 35px;
     padding-bottom: 58px;
     padding-right: 22px;
+  }
 
-    &--catalog {
-      padding-top: 65px;
+  .about-us--catalog {
+    padding-top: 0;
+
+    .about-us__desc {
+      padding: 62px 22px 58px 35px;
+      background-color: white;
     }
   }
 

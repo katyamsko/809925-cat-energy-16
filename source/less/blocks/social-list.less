@@ -1,9 +1,11 @@
 .social-list {
   .list(none; 0; 0);
   display: flex;
-  justify-content: flex-start;
+  /*justify-content: flex-start;*/
+  justify-content: center;
+  flex-wrap: wrap;
   position: relative;
-  padding: 21px 72px 15px;
+  padding: 21px 20px 15px 51px;
 
   &::after {
     position: absolute;
@@ -24,7 +26,8 @@
 
   &::before {
     position: absolute;
-    top: 60px;
+    top: auto;
+    bottom: 8px;
     left: 0;
     box-sizing: border-box;
     width: 280px;
@@ -52,16 +55,19 @@
 
 .social-list__item {
   margin-right: 38px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: @tablet-width) {
   .social-list {
     display: flex;
-    justify-content: flex-start;
+    /*justify-content: flex-start;*/
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 16px 0 15px 23px;
-    width: 127px;
+    padding: 24px 0 15px 18px;
+    /*width: 127px;*/
+    width: 230px;
 
     &::after,
     &::before {

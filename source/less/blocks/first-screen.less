@@ -63,6 +63,10 @@
     margin-bottom: 20px;
   }
 
+  .first-screen__picture-wrapper {
+    position: relative;
+  }
+
   .first-screen__title {
     .fonts(60px; 60px; black; none);
     width: 560px;
@@ -86,8 +90,8 @@
     position: absolute;
     margin: 0;
     padding: 0;
-    top: 251px;
-    left: 3.9%;
+    top: -29px;
+    left: calc(3.9% - 30px);
     z-index: -1;
     width: 709px;
     height: 609px;
@@ -110,17 +114,17 @@
   .first-screen {
     width: 100%;
     margin-bottom: 59px;
-    position: relative;
+    position: static;
     padding: 0;
     padding-bottom: 210px;
 
     &::before {
       position: absolute;
-      top: -190px;
+      top: 0;
       right: 0;
       box-sizing: border-box;
       width: 50%;
-      height: 702px;
+      height: 696px;
       background-color: #63a63b;
       content: "";
       z-index: -1;
@@ -171,7 +175,7 @@
   .first-screen__image {
     width: 552px;
     height: 499px;
-    top: -42px;
+    top: -315px;
     left: 38.9%;
   }
 }
