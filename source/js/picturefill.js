@@ -1438,63 +1438,61 @@
         picturefill = noop;
         pf.fillImg = noop;
     } else {
+      (function() {
+          var isDomReady;
+          var regReady = window.attachEvent ? /d$|^c/ : /d$|^c|^i/;
 
-         // Set up picture polyfill by polling the document
-        (function() {
-            var isDomReady;
-            var regReady = window.attachEvent ? /d$|^c/ : /d$|^c|^i/;
+          var run = function() {
+              var readyState = document.readyState || "";
 
-            var run = function() {
-                var readyState = document.readyState || "";
+              timerId = setTimeout(run, readyState === "loading" ? 200 :  999);
+              if ( document.body ) {
+                  pf.fillImgs();
+                  isDomReady = isDomReady || regReady.test(readyState);
+                  if ( isDomReady ) {
+                      clearTimeout( timerId );
+                  }
 
-                timerId = setTimeout(run, readyState === "loading" ? 200 :  999);
-                if ( document.body ) {
-                    pf.fillImgs();
-                    isDomReady = isDomReady || regReady.test(readyState);
-                    if ( isDomReady ) {
-                        clearTimeout( timerId );
-                    }
+              }
+          };
 
-                }
-            };
+          var timerId = setTimeout(run, document.body ? 9 : 99);
 
-            var timerId = setTimeout(run, document.body ? 9 : 99);
+          // Also attach picturefill on resize and readystatechange
+          // http://modernjavascript.blogspot.com/2013/08/building-better-debounce.html
+          var debounce = function(func, wait) {
+              var timeout, timestamp;
+              var later = function() {
+                  var last = (new Date()) - timestamp;
 
-            // Also attach picturefill on resize and readystatechange
-            // http://modernjavascript.blogspot.com/2013/08/building-better-debounce.html
-            var debounce = function(func, wait) {
-                var timeout, timestamp;
-                var later = function() {
-                    var last = (new Date()) - timestamp;
+                  if (last < wait) {
+                      timeout = setTimeout(later, wait - last);
+                  } else {
+                      timeout = null;
+                      func();
+                  }
+              };
 
-                    if (last < wait) {
-                        timeout = setTimeout(later, wait - last);
-                    } else {
-                        timeout = null;
-                        func();
-                    }
-                };
+              return function() {
+                  timestamp = new Date();
 
-                return function() {
-                    timestamp = new Date();
+                  if (!timeout) {
+                      timeout = setTimeout(later, wait);
+                  }
+              };
+          };
+          var lastClientWidth = docElem.clientHeight;
+          var onResize = function() {
+              isVwDirty = Math.max(window.innerWidth || 0, docElem.clientWidth) !== units.width || docElem.clientHeight !== lastClientWidth;
+              lastClientWidth = docElem.clientHeight;
+              if ( isVwDirty ) {
+                  pf.fillImgs();
+              }
+          };
 
-                    if (!timeout) {
-                        timeout = setTimeout(later, wait);
-                    }
-                };
-            };
-            var lastClientWidth = docElem.clientHeight;
-            var onResize = function() {
-                isVwDirty = Math.max(window.innerWidth || 0, docElem.clientWidth) !== units.width || docElem.clientHeight !== lastClientWidth;
-                lastClientWidth = docElem.clientHeight;
-                if ( isVwDirty ) {
-                    pf.fillImgs();
-                }
-            };
-
-            on( window, "resize", debounce(onResize, 99 ) );
-            on( document, "readystatechange", run );
-        })();
+          on( window, "resize", debounce(onResize, 99 ) );
+          on( document, "readystatechange", run );
+      })();
     }
 
     pf.picturefill = picturefill;
